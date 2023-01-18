@@ -21,7 +21,6 @@ with open(csvpath) as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
 
     csvheader = next(csvreader)
-    print(csvheader)
 
     for row in csvreader:
             #count total months
@@ -63,14 +62,15 @@ with open(csvpath) as csvfile:
     #print(avgchange) for testing
     #file= csvfile.readlines() foun this one to count the rows but cracks the code
     
-
+    #Print results
     print("Financial Analysis")
     print("-------------------")
     print(f"Total Months: {(date)}")
     print(f"Average Change: $ {(avgchange)}")
     print(f"Greatest Increase in Profits {(greatinc[1])} (${(greatinc[0])})")
     print(f"Greatest Decrease in Profits {(greatdec[1])} (${(greatdec[0])})")
-    
+
+#Export to TXT    
 with open("results.txt","w") as f:
         f.write("\nFinancial Analysis")
         f.write("\n")
