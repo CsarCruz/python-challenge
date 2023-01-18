@@ -55,7 +55,7 @@ print("\n----------------------")
 print(f"\nWinner: {winner}")
 print("\n----------------------")
 
-with open("results.txt","w") as f:
+with open('analysis/results.txt','w') as f:
     f.write("Election Results")
     f.write("\n----------------------")
     f.write(f"\nTotal Votes: {votes}")

@@ -63,15 +63,17 @@ with open(csvpath) as csvfile:
     #file= csvfile.readlines() foun this one to count the rows but cracks the code
     
     #Print results
+    print("\n")
     print("Financial Analysis")
-    print("-------------------")
-    print(f"Total Months: {(date)}")
-    print(f"Average Change: $ {(avgchange)}")
-    print(f"Greatest Increase in Profits {(greatinc[1])} (${(greatinc[0])})")
-    print(f"Greatest Decrease in Profits {(greatdec[1])} (${(greatdec[0])})")
+    print("\n-------------------")
+    print(f"\nTotal Months: {(date)}")
+    print(f"\nAverage Change: $ {(avgchange)}")
+    print(f"\nGreatest Increase in Profits {(greatinc[1])} (${(greatinc[0])})")
+    print(f"\nGreatest Decrease in Profits {(greatdec[1])} (${(greatdec[0])})")
+    print("\n")
 
 #Export to TXT    
-with open("results.txt","w") as f:
+with open("analysis/results.txt","w") as f:
         f.write("\nFinancial Analysis")
         f.write("\n")
         f.write("\n-------------------")
